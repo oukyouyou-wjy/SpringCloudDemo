@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: zuul-demo
+
+server:
+  port: 8117
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8089/eureka
+
+zuul:
+  routes:
+    provider-demo: /provider/**
